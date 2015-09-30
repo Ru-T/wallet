@@ -15,5 +15,15 @@ class Exchange < ActiveRecord::Base
   # end
 
 
+  def self.largest_expense
+    Exchange.order(:amount).first.amount
+  end
+
+
+#Ruby way:employees.sort_by {|e| e.salary}.first
+
+  # end
+
+
 
 end

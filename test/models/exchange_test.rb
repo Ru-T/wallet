@@ -18,8 +18,12 @@ class ExchangeTest < ActiveSupport::TestCase
     assert_equal 2, Exchange.number_exchanges
   end
 
-  # def test_transactions_this_month
-  #   assert_equal 1, Exchange.number_exchanges_this_month
-  # end
+  def test_transactions_this_month
+    assert_equal 1, Exchange.number_exchanges_this_month
+  end
+
+  def test_biggest_expense_ever
+    assert_equal -1600.03, Exchange.largest_expense
+  end
 
 end
