@@ -10,9 +10,11 @@ class Exchange < ActiveRecord::Base
     self.count
   end
 
-  # def self.number_exchanges_this_month
-  #   self.where("created_at" > "2014")
-  # end
+  def self.number_exchanges_this_month
+    self.where("created_at > 2014").count
+    # self.where("strftime('%Y', created_at) == 2015").count
+    # self.where("YEAR(created_at) = 2014")
+  end
 
 
   def self.largest_expense
