@@ -2,7 +2,9 @@
 <p>This is a dashboard representing your financial exchanges.</p>
 
 <p>The total amount in your account is:</p>
-<p>The total number of exchanges over all time is:</p>
+<p>The total number of exchanges over all time is: <%=Exchange.number_exchanges%></p>
+<p>The total number of transactions in the current calendar month is:</p>
+
 
 <p><%= link_to 'All Exchanges', exchanges_path %></p>
 <p><%= link_to 'New Exchange', new_exchange_path %></p>
