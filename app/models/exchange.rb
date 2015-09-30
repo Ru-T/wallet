@@ -3,13 +3,6 @@ class Exchange < ActiveRecord::Base
   validates :amount, presence: true
 
   def self.sum_exchanges
-    # sum = 0
-    # Exchange.all.each do |e|
-    #   sum += e.amount
-    # end
-    # sum
-    # #
-    # #
     self.all.reduce(0) {|sum, exchange| sum + exchange.amount}
   end
 
