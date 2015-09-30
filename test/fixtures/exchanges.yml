@@ -1,9 +1,9 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  recipient: MyString
-  amount: 9.99
+  recipient: Mortgage
+  amount: -1600.03
 
 two:
-  recipient: MyString
-  amount: 9.99
+  recipient: Salary
+  amount: 3500.75
