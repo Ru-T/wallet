@@ -18,6 +18,9 @@
       <p>The largest expense ever made is:</p>
         <p id="information"> <%=Exchange.largest_expense%></p>
 
+      <p>The most expensive recipient is:</p>
+        <p id="information"> <%=Exchange.expensive_company%></p>
+
       <p id="link"><%= link_to 'All Exchanges', exchanges_path %>
         &nbsp;&nbsp;
         <%= link_to 'New Exchange', new_exchange_path %></p>
