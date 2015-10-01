@@ -4,10 +4,14 @@
     <p>This is a dashboard representing your financial exchanges.</p>
     <p id="negative"><%=Exchange.negative_balance%></p>
 
-    <p>The total amount in your account is: $<%=Exchange.sum_exchanges%></p>
-    <p>The total number of exchanges over all time is: <%=Exchange.number_exchanges%></p>
+    <p>The total amount in your account is:</p>
+      <p id="information" >$<%=Exchange.sum_exchanges%></p>
+    <p>The total number of exchanges over all time is:</p>
+      <p id="information"> <%=Exchange.number_exchanges%></p>
     <p>The total number of transactions in the current calendar month is:</p>
-    <p>The largest expense ever made is: <%=Exchange.largest_expense%></p>
+    <p id="information"><%=Exchange.number_exchanges_this_month%></p>
+    <p>The largest expense ever made is:</p>
+      <p id="information"> <%=Exchange.largest_expense%></p>
 
 
     <p><%= link_to 'All Exchanges', exchanges_path %></p>
