@@ -19,9 +19,11 @@ class Exchange < ActiveRecord::Base
   end
 
   def self.number_exchanges_this_month
-    month_start = Time.now.beginning_of_month.strftime("%Y-%m-%d")
-    month_end = Time.now.end_of_month.strftime("%Y-%m-%d")
-    self.where("#{month_start} < created_at < #{month_end}").count
+    self.where("created_at BETWEEN ? AND ?",
+      Time.now.beginning_of_month, Time.now.end_of_month).count
+    # month_start = Time.now.beginning_of_month.strftime("%Y-%m-%d")
+    # month_end = Time.now.end_of_month.strftime("%Y-%m-%d")
+    # self.where("#{month_start} < created_at < #{month_end}").count
   end
 
   def self.negative_balance

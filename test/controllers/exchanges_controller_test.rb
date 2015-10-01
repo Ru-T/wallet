@@ -21,7 +21,7 @@ class ExchangesControllerTest < ActionController::TestCase
       post :create, exchange: { amount: @exchange.amount, recipient: @exchange.recipient }
     end
 
-    assert_redirected_to exchange_path(assigns(:exchange))
+    assert_redirected_to exchanges_path(assigns(:exchanges))
   end
 
   test "should show exchange" do

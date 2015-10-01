@@ -20,6 +20,12 @@ class ExchangeTest < ActiveSupport::TestCase
 
   def test_transactions_this_month
     assert_equal 2, Exchange.number_exchanges_this_month
+    Exchange.create!(recipient: "Friend", amount: -200)
+    assert_equal 3, Exchange.number_exchanges_this_month
+  end
+
+  def test_most_expensive_company
+    assert_equal "Mortgage", Exchange.expensive_company
   end
 
   def test_biggest_expense_ever
