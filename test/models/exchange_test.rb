@@ -11,15 +11,15 @@ class ExchangeTest < ActiveSupport::TestCase
   end
 
   def test_sum_exchanges
-    assert_equal 1900.72, Exchange.sum_exchanges
+    assert_equal 200.72, Exchange.sum_exchanges
   end
 
   def test_number_transactions
-    assert_equal 2, Exchange.number_exchanges
+    assert_equal 4, Exchange.number_exchanges
   end
 
   def test_transactions_this_month
-    assert_equal 1, Exchange.number_exchanges_this_month
+    assert_equal 2, Exchange.number_exchanges_this_month
   end
 
   def test_biggest_expense_ever
