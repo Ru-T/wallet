@@ -24,7 +24,7 @@ class ExchangesController < ApplicationController
     @exchange = Exchange.new(exchange_params)
 
     if @exchange.save
-      redirect_to @exchange, notice: 'Exchange was successfully created.'
+      redirect_to exchanges_path, notice: 'Exchange was successfully created.'
     else
       render :new
     end
